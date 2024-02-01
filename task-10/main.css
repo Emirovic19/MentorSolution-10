@@ -1,0 +1,116 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+main::after {
+    display: table;
+    clear: both;
+    content: " ";
+}
+:root {
+    --ff: 'Outfit', sans-serif;
+
+    --clr-price: hsl(178, 100%, 50%);
+    --clr-text: hsl(215, 51%, 70%);
+    --clr-main-bg: hsl(217, 54%, 11%);
+    --clr-card-bg: hsl(216, 50%, 16%);
+    --clr-line: hsl(215, 32%, 27%);
+    --clr-head: hsl(0, 0%, 100%);
+
+    --fs: 18px;
+
+    --fw-300: 300;
+    --fw-400: 400;
+    --fw-600: 600;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--clr-main-bg);
+    font-family: var(--ff);
+    font-size: var(--fs);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    max-width: 100vw;
+}
+main {
+    background-color: var(--clr-card-bg);
+    border-radius: 20px;
+    max-width: 340px;
+}
+article {
+    margin: 20px;
+}
+.one__head-image {
+    background-image: url('image-equilibrium.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    animation: color 0.5s forwards ease;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 300px;
+    min-height: 300px;
+    height: auto;
+}
+.one__head-image svg {
+    position: absolute;
+    opacity: 0;
+}
+.stage-two h1 {
+    color: var(--clr-head);
+    font-weight: var(--fw-600);
+    cursor: pointer;
+}
+.stage-two h1:active {
+    color: var(--clr-price);
+}
+.two__author span:active {
+    color: var(--clr-price);
+}
+.stage-two p {
+    color: var(--clr-text);
+}
+.two__price-and-time {
+    display: flex;
+    gap: 90px;
+    border-bottom: 1px solid var(--clr-line);
+    padding-bottom: 20px;
+}
+.two__price-and-time .left {
+    color: var(--clr-price);
+}
+.two__price-and-time .right {
+    color: var(--clr-text);
+}
+.two__price-and-time svg {
+    position: relative;
+    top: 3px;
+    margin-right: 5px;
+}
+.two__author {
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+.two__author img {
+    max-width: 100%;
+    height: auto;
+    width: 50px;
+    border: 2px solid #fff;
+    border-radius: 100vw;
+    float: left;
+    margin-right: 20px;
+}
+.two__author p {
+    color: var(--clr-text);
+    position: relative;
+    top: -5px;
+}
+.two__author span {
+    color: var(--clr-head);
+    cursor: pointer;
+}
